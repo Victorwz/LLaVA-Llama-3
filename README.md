@@ -42,9 +42,12 @@ pip install flash-attn --no-build-isolation
 git pull
 pip install -e .
 ```
+### Fine-Tune Your Own LLaVA-Llama-3 Model
+Please follow the updated fine-tuning script with DeepSpeed ZeRO-3: [`finetune.sh`](https://github.com/Victorwz/LLaVA-Llama-3/blob/main/scripts/finetune.sh). The following parameters are updated to accomodate Llama-3:
+- `--version`: v3, which adopts the tokenization and preprocessing function with Llama-3 tokenizer.
 
-## LLaVA Weights
-Please check out our [Model Zoo](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md) for all public LLaVA checkpoints, and the instructions of how to use the weights.
+Please download the pre-trained vision-language projector weights in [Projector_MODEL](https://huggingface.co/weizhiwang/llava-v1.5-llama-3-8b-pretrain).
+
 
 ## Demo
 
