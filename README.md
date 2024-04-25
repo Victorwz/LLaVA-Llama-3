@@ -31,7 +31,7 @@ pip install flash-attn --no-build-isolation
 Please follow the updated fine-tuning script with DeepSpeed ZeRO-3: [`finetune.sh`](https://github.com/Victorwz/LLaVA-Llama-3/blob/main/scripts/finetune.sh). The following parameters are updated to accomodate Llama-3:
 - `--version`: v3, which adopts the tokenization and preprocessing function with Llama-3 tokenizer.
 
-Please download the pre-trained vision-language projector weights in [Projector_MODEL](https://huggingface.co/weizhiwang/llava-v1.5-llama-3-8b-pretrain).
+Please download the pre-trained vision-language projector weights in [Projector_MODEL](https://huggingface.co/weizhiwang/llava-v1.5-llama-3-8b-pretrain-clip-large-336px).
 
 In terms of the image data preparation, please follow [`DATA.md`](DATA.md).
 
