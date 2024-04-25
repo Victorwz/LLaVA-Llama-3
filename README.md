@@ -7,7 +7,7 @@
 ## Updates
 - A new [`preprocess_llama3`](llava/train/train.py#492) function in ``llava/train/train.py`` for being compatible with LLaMA-3
 - A new [`conv_llama_3`](llava/conversation.py#264) conversation templates in ``llava/conversations.py`` for being compatible with LLaMA-3
-- This repo is compatible with huggingface transformers >= 4.31.0.
+- This repo is compatible with huggingface `transformers>=4.31.0`.
 
 ## Install
 
