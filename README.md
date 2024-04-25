@@ -61,18 +61,18 @@ In LLaVA-1.5, the authors evaluate models on a diverse set of 12 benchmarks. To 
 See [Evaluation.md](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md).
 
 
-## Citation
+## Credits
+This is a reproduction project, all research credits should be attributed to original authors for LLaVA. Please cite their papers listed below as well.
 
-If you find LLaVA useful for your research and applications, please cite using this BibTeX:
 ```bibtex
-
-@misc{liu2023improvedllava,
-      title={Improved Baselines with Visual Instruction Tuning}, 
-      author={Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
-      publisher={arXiv:2310.03744},
-      year={2023},
+@misc{wang2024llavallama3,
+  title={LLaVA-Llama-3-8B: A reproduction towards LLaVA-3 based on Llama-3-8B LLM backbone},
+  author={Wang, Weizhi},
+  year={2024}
 }
+```
 
+```bibtex
 @misc{liu2023llava,
       title={Visual Instruction Tuning}, 
       author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
@@ -80,6 +80,3 @@ If you find LLaVA useful for your research and applications, please cite using t
       year={2023},
 }
 ```
-
-## Credits
-This is a reproduction project, all research credits should be attributed to original authors for LLaVA. Please cite their papers listed above.
