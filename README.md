@@ -73,10 +73,9 @@ This is a reproduction project, all research credits should be attributed to ori
 ```
 
 ```bibtex
-@misc{liu2023llava,
-      title={Visual Instruction Tuning}, 
-      author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
-      publisher={arXiv:2304.08485},
-      year={2023},
+@misc{wang2024llavallama3,
+  title={LLaVA-Llama-3-8B: A reproduction towards LLaVA-v1.5 based on Llama-3-8B LLM backbone},
+  author={Wang, Weizhi},
+  year={2024}
 }
 ```
