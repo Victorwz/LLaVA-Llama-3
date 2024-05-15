@@ -5,7 +5,7 @@
 🤝Community Contributions: [[LLaVA-LLaMA-3-8b](https://huggingface.co/weizhiwang/LLaVA-LLaMA-3-8B)]
 
 ## Updates
-- This repo is upgraded to llava-next codebase to also support phi-3 and llama-3 models.
+- This repo is upgraded to llava-next codebase to also support phi-3, llama-3 and mistral-v0.1 models.
 - A new [`preprocess_llama3`](llava/train/train.py#492) function in ``llava/train/train.py`` for being compatible with LLaMA-3
 - A new [`conv_llama_3`](llava/conversation.py#264) conversation templates in ``llava/conversations.py`` for being compatible with LLaMA-3
 - This repo is compatible with huggingface `transformers>=4.37.2`.
@@ -20,6 +20,7 @@ conda create -n llava python=3.10 -y
 conda activate llava
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
+pip install git+https://github.com/huggingface/transformers
 ```
 
 3. Install additional packages for training cases
