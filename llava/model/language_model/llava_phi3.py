@@ -19,7 +19,7 @@ import torch
 import torch.nn as nn
 
 from transformers import AutoConfig, AutoModelForCausalLM, \
-                         LlamaConfig, LlamaModel, LlamaForCausalLM
+                         Phi3Config, Phi3Model, Phi3ForCausalLM
 
 from transformers.modeling_outputs import CausalLMOutputWithPast
 from transformers.generation.utils import GenerateOutput
@@ -27,24 +27,24 @@ from transformers.generation.utils import GenerateOutput
 from ..llava_arch import LlavaMetaModel, LlavaMetaForCausalLM
 
 
-class LlavaConfig(LlamaConfig):
-    model_type = "llava_llama"
+class LlavaPhi3Config(Phi3Config):
+    model_type = "llava_phi3"
 
 
-class LlavaLlamaModel(LlavaMetaModel, LlamaModel):
-    config_class = LlavaConfig
+class LlavaPhi3Model(LlavaMetaModel, Phi3Model):
+    config_class = LlavaPhi3Config
 
-    def __init__(self, config: LlamaConfig):
-        super(LlavaLlamaModel, self).__init__(config)
+    def __init__(self, config: Phi3Config):
+        super(LlavaPhi3Model, self).__init__(config)
 
 
-class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
-    config_class = LlavaConfig
+class LlavaPhi3ForCausalLM(Phi3ForCausalLM, LlavaMetaForCausalLM):
+    config_class = LlavaPhi3Config
 
     def __init__(self, config):
-        super(LlamaForCausalLM, self).__init__(config)
-        self.model = LlavaLlamaModel(config)
-        self.pretraining_tp = config.pretraining_tp
+        super(Phi3ForCausalLM, self).__init__(config)
+        self.model = LlavaPhi3Model(config)
+        # self.pretraining_tp = config.pretraining_tp
         self.vocab_size = config.vocab_size
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
 
@@ -155,5 +155,5 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
             inputs['image_sizes'] = image_sizes
         return inputs
 
-AutoConfig.register("llava_llama", LlavaConfig)
-AutoModelForCausalLM.register(LlavaConfig, LlavaLlamaForCausalLM)
+AutoConfig.register("llava_phi3", LlavaPhi3Config)
+AutoModelForCausalLM.register(LlavaPhi3Config, LlavaPhi3ForCausalLM)
