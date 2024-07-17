@@ -1112,7 +1112,7 @@ def train(attn_implementation=None):
         tokenizer.pad_token = tokenizer.unk_token
         conversation_lib.default_conversation = conversation_lib.conv_templates[model_args.version]
     else:
-        tokenizer.pad_token = "<|reserved_special_token_0|>" if not "llama-3" in model_args.model_name_or_path.lower() else tokenizer.unk_token
+        tokenizer.pad_token = "<|reserved_special_token_0|>" if "llama-3" in model_args.model_name_or_path.lower() else tokenizer.unk_token
         if model_args.version in conversation_lib.conv_templates:
             conversation_lib.default_conversation = conversation_lib.conv_templates[model_args.version]
         else:
