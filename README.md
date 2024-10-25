@@ -1,5 +1,7 @@
 # LLaVA-LLaMA-3
 
+This repo is deprecated. The updated repo is opensourced at [LLaVA-Video-Llama-3](https://github.com/Victorwz/LLaVA-Video-Llama-3), which supports the visual understanding towards multiple-images and short-videos.
+
 *A reproduction with LLaMA-3 backbone, rather than an official implementation
 
 🤝Community Contributions: [[LLaVA-LLaMA-3-8b](https://huggingface.co/weizhiwang/LLaVA-LLaMA-3-8B)]
